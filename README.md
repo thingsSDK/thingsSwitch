@@ -13,7 +13,7 @@ To install thingsSwitch on your ESP8266:
   1. If you don't see your device you may require drivers
 3. Select the latest version of thingsSwitch from the _Binaries_ drop Download
 
-[Flasher.js with thingsSwitch selected](img/flasher.png)
+![Flasher.js with thingsSwitch selected](img/flasher.png)
 
 ## Configuration
 
@@ -25,12 +25,12 @@ To install thingsSwitch on your ESP8266:
 6. Ask Alexa to "discover devices"
 7. Tell Alexa to "turn <device name> on" or "turn <device name> off"
 
-[Connect to thingsSwitch](img/connect_to_thingsSwitch.jpg)
+![Connect to thingsSwitch](img/connect_to_thingsSwitch.jpg)
 
-[Captive portal screen](img/configure.jpg)
+![Captive portal screen](img/configure.jpg)
 
-[Configure values](img/config_values.jpg)
+![Configure values](img/config_values.jpg)
 
 ## Developer
 
-Check out the [Contributing doc](CONTRIBUTING.md).
+Check out the [contributing doc](CONTRIBUTING.md).
