@@ -29,7 +29,7 @@ To install thingsSwitch on your ESP8266:
 
 ![Captive portal screen](img/configure.jpg)
 
-![Configure values](img/config_values.jpgs)
+![Configure values](img/config_values.jpg)
 
 ## Developer
 
