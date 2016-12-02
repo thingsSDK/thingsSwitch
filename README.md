@@ -11,7 +11,8 @@ To install thingsSwitch on your ESP8266:
 1. [Download Flasher.js](https://github.com/thingsSDK/flasher.js/releases).
 2. Select the _Serial Port_ from the drop
   1. If you don't see your device you may require drivers
-3. Select the latest version of thingsSwitch from the _Binaries_ drop Download
+3. Select the latest version of thingsSwitch from the _Binaries_ drop down
+4. Click _Flash!_
 
 ![Flasher.js with thingsSwitch selected](img/flasher.png)
 
