@@ -25,11 +25,11 @@ To install thingsSwitch on your ESP8266:
 6. Ask Alexa to "discover devices"
 7. Tell Alexa to "turn <device name> on" or "turn <device name> off"
 
-![Connect to thingsSwitch](img/connect_to_thingsSwitch.jpg)
+![Connect to thingsSwitch](img/connect_to_thingsSwitch.jpg =150x)
 
-![Captive portal screen](img/configure.jpg)
+![Captive portal screen](img/configure.jpg =150x)
 
-![Configure values](img/config_values.jpg)
+![Configure values](img/config_values.jpg =150x)
 
 ## Developer
 
