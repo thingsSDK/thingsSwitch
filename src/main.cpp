@@ -87,6 +87,7 @@ void wifiSetup()
     WiFiManagerParameter custom_device_name("device_name", "Device Name", device_name, 40);
     WiFiManagerParameter custom_pin("pin", "Pin", pin, 2);
     WiFiManager wifiManager;
+    //wifiManager.resetSettings();
     wifiManager.setSaveConfigCallback(saveConfigCallback);
 
     wifiManager.addParameter(&custom_device_name);

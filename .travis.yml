@@ -1,64 +1,21 @@
-# Continuous Integration (CI) is the practice, in software
-# engineering, of merging all developer working copies with a shared mainline
-# several times a day < http://docs.platformio.org/en/stable/ci/index.html >
-#
-# Documentation:
-#
-# * Travis CI Embedded Builds with PlatformIO
-#   < https://docs.travis-ci.com/user/integration/platformio/ >
-#
-# * PlatformIO integration with Travis CI
-#   < http://docs.platformio.org/en/stable/ci/travis.html >
-#
-# * User Guide for `platformio ci` command
-#   < http://docs.platformio.org/en/stable/userguide/cmd_ci.html >
-#
-#
-# Please choice one of the following templates (proposed below) and uncomment
-# it (remove "# " before each line) or use own configuration according to the
-# Travis CI documentation (see above).
-#
-
-
-#
-# Template #1: General project. Test it using existing `platformio.ini`.
-#
-
 language: python
 python:
-    - "2.7"
+- '2.7'
 sudo: false
 cache:
-    directories:
-        - "~/.platformio"
+  directories:
+  - "~/.platformio"
 install:
-    - pip install -U platformio
-    - platformio platform install https://github.com/platformio/platform-espressif8266.git#feature/stage
-
+- pip install -U platformio
+- platformio platform install https://github.com/platformio/platform-espressif8266.git#feature/stage
 script:
-    - platformio run
-
-
-#
-# Template #2: The project is intended to by used as a library with examples
-#
-
-# language: python
-# python:
-#     - "2.7"
-#
-# sudo: false
-# cache:
-#     directories:
-#         - "~/.platformio"
-#
-# env:
-#     - PLATFORMIO_CI_SRC=path/to/test/file.c
-#     - PLATFORMIO_CI_SRC=examples/file.ino
-#     - PLATFORMIO_CI_SRC=path/to/test/directory
-#
-# install:
-#     - pip install -U platformio
-#
-# script:
-#     - platformio ci --lib="." --board=ID_1 --board=ID_2 --board=ID_N
+- platformio run
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: qgTcRCVBZ8EwzdAX2ywmj01fkUbTebM2iXMpn2GqhF3MFc7M3sPJPbIRM88AdK4Lg9I+GWBWaXr4Zr8UmEkoY1/eI6B1oftl80vBF+5j3Z/SB3dhLb6nMeK+FGHm9DakM0VSZo1Z+GWq1lkPf3DkKmxtJtunnF/UlbOk4OMbfxT5dpJwChUQzNiA4PNKD7xJ1Vou5R0DT9OJIYTp8GRkmSuRmiPwL36+2BVueoJuDVNoEhDOilN14xdt1/8LDZ/SiybKd8EZ14MT0S6/E3XZ0sDylmrYdpsrLRr/OFiucg6cS0e1GRiEYnEF/7gCe2+f0FYc6zpHxWB25kaQrIOsruW1ABUUTalOPekh5AZtXjhziyCbQYaGqp+oQkLuoetB0X3kn4QCy5ecUEbh1oqSAgxIwZ+ArV5O/jCOKAvvwYFWV7xezwktvHgqG0iuYoblp5zYFSFSC+iGeE0l4PAvYjVtoyZZMT4q+ckvQDFKGOjoj553/pTef4uTjhwc6ZQ2K9jDxII5JB4ub9mz6O5LyPgB6XbNyWibJdyg2oGlMlgXFVE39Z4k/SKWC0uJoUyLow8M4PyUEy5XNtcarbhwfslLfNkAjB1qqMnlu8H0oKXt/SGevRoJ46Iug4JceDF1vR/DXCfeKkQJmvc8A9guJhPw6xaLWRtLx202iTADl5k=
+  file: ".pioenvs/nodemcuv2/firmware.bin"
+  on:
+    repo: thingsSDK/thingsSwitch
+    tags: true
